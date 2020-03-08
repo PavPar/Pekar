@@ -1,0 +1,142 @@
+.page {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    width: 90%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.header {
+    background-color: #1F1F1F;
+    width: 100%;
+    min-height: 350px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__title {
+    color: white;
+    font-size: 75px;
+    font-family: 'Stalinist One', cursive;
+    margin-bottom: 0;
+}
+
+.header__subtitle {
+    color: white;
+    font-size: 25px;
+}
+
+.header__pekar {
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    top: 0;
+    right: -80px;
+}
+
+.content {
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+}
+
+.order__components {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 350px;
+    padding: 20px 0;
+}
+
+.order__header {
+    margin: 50px 0;
+    align-self: center;
+    font-size: 40px;
+}
+
+.order__form {}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 25px 0;
+    height: 100px;
+}
+
+.component__choises {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.option_user-info {
+    width: 300px;
+}
+
+.option:last-of-type {
+    margin-bottom: 0;
+}
+
+.user-info {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: #2F80ED;
+}
+
+.user-info__courier{
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+}
+.user-info__header {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.submit {
+    margin-top: 50px;
+}
+
+.footer {
+    min-height: 250px;
+    width: 100%;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer__author {
+    color: white;
+}
+
+/* Chaos ahead */
