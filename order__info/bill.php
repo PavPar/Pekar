@@ -25,8 +25,10 @@
             <h2 class="order__header">Спасибо за ваш заказ !</h2>
             <table class="order__info">
                 <?php
-                function Calculate_Price(){
-                    $Total =0;
+                session_start();
+                function Calculate_Price()
+                {
+                    $Total = 0;
                     return $Total;
                 }
                 function cake_components_validation($value)
@@ -106,12 +108,12 @@
                 function output_row_type_2($col_1, $col_2)
                 {
                     echo "<tr>";
-                    echo "<td colspan="."2".">" . $col_1 . "</td>";
+                    echo "<td colspan=" . "2" . ">" . $col_1 . "</td>";
                     echo "<td>" . $col_2 . "</td>";
                     echo "</tr>";
                 }
 
-            
+
                 if (isset($_GET['submit'])) {
                     $cake = array(
                         'dough' => cake_components_validation($_GET['dough']),
@@ -128,40 +130,35 @@
                         'phone' => $_GET['user_phone'],
                         'order_date' => $_GET['user_order_date'],
                         'order_time' => $_GET['user_order_time'],
-                        'price_file' => $_GET['price_file']
+                        // 'price_file' => $_GET['price_file']
                     );
 
                     output_row_type_3("Вид изделия", $cake['type'], "Price");
                     output_row_type_3("Тесто", $cake['dough'], "Price");
                     output_row_type_3("Крем", $cake['cream'], "Price");
                     output_row_type_3("Украшения", $cake['glaz'] . "<br>" . $cake['figures'], "Price");
-                    output_row_type_2("Итого :",'Price');
-               
+                    output_row_type_2("Итого :", 'Price');
 
-                    // print_r($usr);
-                    // echo '<br>';
-                    // print_r($cake);
-
-                    
-
+              
                 }
                 ?>
             </table>
             <table class="order__info">
                 <?php
-                     output_row_type_2("Имя получателя", $usr['name']);
-                     output_row_type_2("Адрес", $usr['address']);
-                     output_row_type_2("Телефон", $usr['phone']);
-                     output_row_type_2("Дата доставки", $usr['order_date']);
-                     output_row_type_2("Время доставки", $usr['order_time']);
+                output_row_type_2("Имя получателя", $usr['name']);
+                output_row_type_2("Адрес", $usr['address']);
+                output_row_type_2("Телефон", $usr['phone']);
+                output_row_type_2("Дата доставки", $usr['order_date']);
+                output_row_type_2("Время доставки", $usr['order_time']);
+    
+                
+                print_r($_SESSION['filedata']);
                 ?>
             </table>
         </section>
 
     </main>
-<?php
-echo $_SESSION['filedata'];
-?>
+
     <footer class="footer">
         <p class="footer__author">Paramonov Pavel</p>
     </footer>

@@ -24,7 +24,7 @@
 
             <h2 class="order__header">Шаг 1 : Выберите ингредиенты</h2>
 
-            <form class="order__form" action="/php/index_php.php" method="GET" target="_blank">
+            <form class="order__form" action="/order__info/bill.php" method="GET" target="_blank">
                 <div class="order__components">
 
                     <div class="component">
@@ -145,9 +145,7 @@
                         </select>
                     </label>
 
-                    <label class="option option_user-info" for="price_file"> Файл с ценами
-                        <input type="file" id="price_file" name="price_file">
-                    </label>
+                 
 
                     <div class="submit">
                         <input name="submit" type="submit" value="Оформить Заказ">
@@ -155,12 +153,15 @@
 
                     <img class="user-info__courier" src="img/courier.svg">
                 </div>
-                <?php
-
-                ?>
 
             </form>
 
+            <form class="user-info" method="post" enctype="multipart/form-data" target="_blank" action="upload.php">
+                        <label class="option option_user-info" for="price_file"> Файл с ценами
+                            <input type="file" id="price_file" name="price_file" accept=".txt">
+                            <input name="submit" type="submit" value="Загрузить файл">
+                        </label>
+                    </form>
         </section>
 
     </main>
