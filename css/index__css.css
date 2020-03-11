@@ -120,7 +120,9 @@
     margin-bottom: 50px;
     font-size: 40px;
 }
-
+.user-info_theme_gray{
+    background: #F2F2F2;
+}
 .submit {
     margin-top: 50px;
 }
@@ -139,4 +141,7 @@
     color: white;
 }
 
+.error{
+    color: red;
+}
 /* Chaos ahead */

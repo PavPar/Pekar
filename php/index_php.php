@@ -1,8 +1,15 @@
 <?php
-if (isset($_GET['submit'])) {
-    $myfile = fopen($_GET['price_file'], "r") or die("Unable to open file!");
-    $_SESSION['filedata'] = fread($myfile, filesize($_GET['price_file']));
-    fclose($myfile);
-}
+error_reporting(0);
+// /order__info/bill.php
+$dough=$cream=$type=$name=$adress=$phone=$phone=$date=$file="";
+$errors = false;
+if($_SERVER["REQUEST_METHOD"] == "GET"){
+    
+    // if (empty($_GET["user_name"])) {
+    //     $name = "Missing";
+    //     $errors = true;
+    // }
+  
 
-header("Location: /order__info/bill.php");
+}
+?>
