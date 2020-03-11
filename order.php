@@ -149,12 +149,13 @@
                     </div>
 
                     <img class="user-info__courier" src="img/courier.svg">
+                    <img class="user-info__courier courier_postion_left" src="img/courier.svg">
                 </div>
 
             </form>
 
             <form class="user-info user-info_theme_gray" method="post" enctype="multipart/form-data" target="_blank" action="upload.php">
-                <label class="option option_user-info" for="price_file"> Файл с ценами
+                <label class="option option_user-info file-upload" for="price_file"> Файл с ценами
                     <input type="file" id="price_file" name="price_file" accept=".txt">
                     <input name="submit_file" type="submit" value="Загрузить файл">
                 </label>
